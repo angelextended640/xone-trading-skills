@@ -1,0 +1,20 @@
+[
+  {
+    "symbol": "FPT",
+    "price": 135000,
+    "high_52w": 136000,
+    "volume_20d_avg": 2500000,
+    "eps_growth_yoy_pct": 22.5,
+    "rs_rating": 85,
+    "foreign_net_buy_10d_vnd": 50000000000
+  },
+  {
+    "symbol": "VNM",
+    "price": 68000,
+    "high_52w": 85000,
+    "volume_20d_avg": 4000000,
+    "eps_growth_yoy_pct": 5.0,
+    "rs_rating": 45,
+    "foreign_net_buy_10d_vnd": -10000000000
+  }
+]

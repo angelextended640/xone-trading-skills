@@ -1,0 +1,28 @@
+[
+  {
+    "symbol": "FPT",
+    "report_date": "2026-05-13",
+    "gap_pct": 2.5,
+    "volume_relative": 1.6,
+    "trend_20d_pct": 5.0,
+    "above_ma50": true,
+    "above_ma200": true,
+    "eps_surprise_pct": 10.0,
+    "has_red_candle_pullback": true,
+    "current_price": 142000,
+    "report_day_low": 138000
+  },
+  {
+    "symbol": "VIC",
+    "report_date": "2026-05-13",
+    "gap_pct": 0.5,
+    "volume_relative": 1.1,
+    "trend_20d_pct": -5.0,
+    "above_ma50": true,
+    "above_ma200": true,
+    "eps_surprise_pct": -2.0,
+    "has_red_candle_pullback": true,
+    "current_price": 45000,
+    "report_day_low": 46000
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-05-13",
+  "note": "Sector classification for the most actively traded VN stocks. VN-Index sector weights are approximate and meant for rotation analysis, not portfolio replication. Update when listings change or when official UBCKNN/HOSE classifications shift.",
+  "sectors": {
+    "Banking": {
+      "vn_index_weight_approx_pct": 30.0,
+      "description": "Ngân hàng thương mại — chiếm xấp xỉ 30% VN-Index. Room ngoại tối đa 30%.",
+      "symbols": [
+        "VCB", "BID", "CTG", "TCB", "MBB", "ACB", "VPB", "TPB", "STB", "HDB",
+        "VIB", "EIB", "OCB", "MSB", "SHB", "LPB", "SSB", "ABB", "BAB"
+      ]
+    },
+    "Real Estate": {
+      "vn_index_weight_approx_pct": 20.0,
+      "description": "Bất động sản — VIC/VHM/VRE chiếm phần lớn. Beta cao, nhạy lãi suất.",
+      "symbols": [
+        "VIC", "VHM", "VRE", "NVL", "KDH", "DXG", "PDR", "DIG", "NLG", "KBC",
+        "VPI", "HDG", "AGG", "SCR", "ITA", "ITC", "CEO", "L14"
+      ]
+    },
+    "Materials": {
+      "vn_index_weight_approx_pct": 10.0,
+      "description": "Vật liệu — chủ yếu thép (HPG, HSG, NKG), xi măng (HT1, BCC), cao su (PHR, DPR).",
+      "symbols": [
+        "HPG", "HSG", "NKG", "TLH", "POM", "SMC",
+        "HT1", "BCC", "BTS",
+        "PHR", "DPR", "TRC", "GVR",
+        "DGC", "DCM", "DPM"
+      ]
+    },
+    "Consumer Discretionary": {
+      "vn_index_weight_approx_pct": 8.0,
+      "description": "Bán lẻ, hàng tiêu dùng không thiết yếu — MWG (Thế giới Di động), DGW, PNJ, PET.",
+      "symbols": ["MWG", "DGW", "PNJ", "PET", "FRT", "PHN"]
+    },
+    "Consumer Staples": {
+      "vn_index_weight_approx_pct": 7.0,
+      "description": "Hàng tiêu dùng thiết yếu — sữa (VNM), thực phẩm (MSN, MCH), bia (SAB, BHN).",
+      "symbols": ["VNM", "MSN", "MCH", "SAB", "BHN", "KDC", "VOC", "QNS"]
+    },
+    "Energy": {
+      "vn_index_weight_approx_pct": 7.0,
+      "description": "Năng lượng — dầu khí (GAS, PLX, BSR, PVD, PVS), điện (POW).",
+      "symbols": ["GAS", "PLX", "BSR", "PVD", "PVS", "PVT", "PVC", "POW"]
+    },
+    "Industrials": {
+      "vn_index_weight_approx_pct": 6.0,
+      "description": "Công nghiệp, logistics, xây dựng — Vietjet, HVN, ACV, GMD, HHV.",
+      "symbols": [
+        "VJC", "HVN", "ACV", "GMD", "HAH", "VSC", "PHP",
+        "HBC", "CTD", "CTI", "VCG", "FCN", "HHV", "C4G"
+      ]
+    },
+    "Technology": {
+      "vn_index_weight_approx_pct": 5.0,
+      "description": "Công nghệ thông tin — FPT chiếm phần lớn weight; CMG, ELC.",
+      "symbols": ["FPT", "CMG", "ELC", "SAM", "ITD"]
+    },
+    "Utilities": {
+      "vn_index_weight_approx_pct": 4.0,
+      "description": "Điện, nước — PPC, NT2, REE, GEG, PC1.",
+      "symbols": ["PPC", "NT2", "REE", "GEG", "PC1", "TV2", "SBA", "VSH"]
+    },
+    "Financial Services (non-bank)": {
+      "vn_index_weight_approx_pct": 2.5,
+      "description": "Chứng khoán, bảo hiểm — SSI, VCI, HCM, MBS, VND, BVH.",
+      "symbols": [
+        "SSI", "VCI", "HCM", "MBS", "VND", "VIX", "SHS", "TVB", "TCI",
+        "BVH", "BMI", "PVI", "MIG"
+      ]
+    },
+    "Healthcare": {
+      "vn_index_weight_approx_pct": 0.5,
+      "description": "Y tế, dược phẩm — DHG, IMP, DBD, TRA.",
+      "symbols": ["DHG", "IMP", "DBD", "TRA", "DMC", "PME", "JVC"]
+    }
+  },
+  "indices": {
+    "VN-Index": "VNINDEX",
+    "VN30": "VN30",
+    "HNX-Index": "HNX-INDEX",
+    "HNX30": "HNX30",
+    "UPCOM-Index": "UPCOM-INDEX"
+  }
+}

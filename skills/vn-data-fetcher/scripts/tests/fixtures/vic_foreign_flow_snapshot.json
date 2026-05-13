@@ -1,0 +1,11 @@
+{
+  "snapshot": {
+    "symbol": "VIC",
+    "foreign_buy_volume": 1250000,
+    "foreign_sell_volume": 980000,
+    "foreign_net_volume": 270000,
+    "foreign_total_room": 1869983116,
+    "foreign_current_room": 57637438,
+    "as_of_session": "2026-05-13"
+  }
+}

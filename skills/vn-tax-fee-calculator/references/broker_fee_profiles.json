@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-05-13",
+  "note": "Default fee profiles for the most common Vietnamese brokerages. Fees vary by tier and channel (online vs traditional vs VIP). These defaults reflect the typical retail online tier. Override via --custom-fee-pct or update from the broker's website.",
+  "brokers": {
+    "vps": {
+      "display_name": "VPS",
+      "fee_pct": 0.15,
+      "min_fee_vnd": null,
+      "channel": "online_standard",
+      "notes": "Largest retail brokerage in VN by market share. Some VIP tiers go lower."
+    },
+    "ssi": {
+      "display_name": "SSI",
+      "fee_pct": 0.15,
+      "min_fee_vnd": null,
+      "channel": "online_standard",
+      "notes": "Institutional-grade with iBoard API access (separate cost)."
+    },
+    "vndirect": {
+      "display_name": "VNDirect",
+      "fee_pct": 0.15,
+      "min_fee_vnd": null,
+      "channel": "online_standard",
+      "notes": "Active in derivatives and ETFs."
+    },
+    "hsc": {
+      "display_name": "HSC",
+      "fee_pct": 0.15,
+      "min_fee_vnd": null,
+      "channel": "online_standard",
+      "notes": "Strong research and institutional client base."
+    },
+    "mbs": {
+      "display_name": "MBS",
+      "fee_pct": 0.12,
+      "min_fee_vnd": null,
+      "channel": "online_standard",
+      "notes": "Owned by MB Bank, slightly cheaper than the top 4."
+    },
+    "tcbs": {
+      "display_name": "TCBS",
+      "fee_pct": 0.10,
+      "min_fee_vnd": null,
+      "channel": "online_standard",
+      "notes": "Techcombank-owned; competitive pricing for retail."
+    },
+    "dnse": {
+      "display_name": "DNSE",
+      "fee_pct": 0.03,
+      "min_fee_vnd": null,
+      "channel": "online_self_service",
+      "notes": "Cheapest retail brokerage; fully self-service online. Min commission may apply on small lots."
+    },
+    "vci": {
+      "display_name": "VCI (Vietcap)",
+      "fee_pct": 0.15,
+      "min_fee_vnd": null,
+      "channel": "online_standard",
+      "notes": "Strong derivatives offering."
+    },
+    "abs": {
+      "display_name": "ABS",
+      "fee_pct": 0.15,
+      "min_fee_vnd": null,
+      "channel": "online_standard"
+    },
+    "kbsv": {
+      "display_name": "KB Securities Vietnam",
+      "fee_pct": 0.15,
+      "min_fee_vnd": null,
+      "channel": "online_standard"
+    }
+  },
+  "global": {
+    "sale_tax_pct": 0.10,
+    "cash_dividend_tax_pct": 5.0,
+    "stock_dividend_tax_pct": 5.0,
+    "stock_dividend_par_value_vnd": 10000,
+    "custody_fee_per_share_per_month_vnd": 0.27,
+    "ubcknn_fee_pct": 0.02,
+    "advance_cash_fee_pct_per_day_default": 0.04
+  }
+}

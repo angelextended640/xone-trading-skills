@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/generate_skill_docs.py --skill vn-market-mechanics)",
+      "Bash(python scripts/generate_skill_docs.py --skill vn-position-sizer)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

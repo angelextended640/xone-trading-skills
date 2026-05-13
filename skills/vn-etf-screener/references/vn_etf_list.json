@@ -1,0 +1,32 @@
+[
+  {
+    "symbol": "E1VFVN30",
+    "name": "VFMVN30 ETF",
+    "nav_per_share": 21500,
+    "market_price": 21600,
+    "tracking_error_pct": 0.8,
+    "expense_ratio_pct": 0.65,
+    "volume_20d_avg": 1500000,
+    "foreign_room_pct": 5.0
+  },
+  {
+    "symbol": "FUEVFVND",
+    "name": "VFMVN DIAMOND ETF",
+    "nav_per_share": 31000,
+    "market_price": 31500,
+    "tracking_error_pct": 1.2,
+    "expense_ratio_pct": 0.80,
+    "volume_20d_avg": 5000000,
+    "foreign_room_pct": 0.0
+  },
+  {
+    "symbol": "FUESSV50",
+    "name": "SSIAM VNX50 ETF",
+    "nav_per_share": 18000,
+    "market_price": 17800,
+    "tracking_error_pct": 1.5,
+    "expense_ratio_pct": 0.75,
+    "volume_20d_avg": 50000,
+    "foreign_room_pct": 10.0
+  }
+]

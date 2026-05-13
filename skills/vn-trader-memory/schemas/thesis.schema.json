@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "vn_thesis.schema.json",
+  "title": "VN Trader Memory Thesis",
+  "description": "Schema for a single-ticker VN equity thesis tracked by vn-trader-memory. All monetary fields are VND.",
+  "type": "object",
+  "required": [
+    "thesis_id",
+    "ticker",
+    "created_at",
+    "updated_at",
+    "thesis_type",
+    "status",
+    "status_history",
+    "thesis_statement",
+    "origin"
+  ],
+  "properties": {
+    "thesis_id": {
+      "type": "string",
+      "pattern": "^th_[a-z0-9]+_[a-z]+_[0-9]{8}_[a-f0-9]{4}$",
+      "description": "Unique ID: th_{ticker}_{type_abbr}_{YYYYMMDD}_{hash4}"
+    },
+    "ticker": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 5,
+      "description": "VN equity ticker (3-5 uppercase letters)"
+    },
+    "exchange": {
+      "type": ["string", "null"],
+      "enum": ["hose", "hnx", "upcom", null]
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "thesis_type": {
+      "type": "string",
+      "enum": [
+        "dividend_income",
+        "growth_momentum",
+        "mean_reversion",
+        "earnings_drift",
+        "pivot_breakout"
+      ]
+    },
+    "setup_type": {"type": ["string", "null"]},
+    "catalyst": {"type": ["string", "null"]},
+    "status": {
+      "type": "string",
+      "enum": ["IDEA", "ENTRY_READY", "ACTIVE", "CLOSED", "INVALIDATED"]
+    },
+    "status_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["status", "at", "reason"],
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["IDEA", "ENTRY_READY", "ACTIVE", "CLOSED", "INVALIDATED"]
+          },
+          "at": {"type": "string", "format": "date-time"},
+          "reason": {"type": "string"}
+        }
+      }
+    },
+    "thesis_statement": {"type": "string", "minLength": 1},
+    "evidence": {"type": "array", "items": {"type": "string"}, "default": []},
+    "kill_criteria": {"type": "array", "items": {"type": "string"}, "default": []},
+    "confidence": {"type": ["string", "null"]},
+    "confidence_score": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "entry": {
+      "type": "object",
+      "properties": {
+        "target_price": {"type": ["number", "null"]},
+        "stop_loss": {"type": ["number", "null"]},
+        "conditions": {"type": "array", "items": {"type": "string"}, "default": []},
+        "actual_price": {"type": ["number", "null"]},
+        "actual_date": {"type": ["string", "null"], "format": "date-time"},
+        "setup_type": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "exit": {
+      "type": "object",
+      "properties": {
+        "stop_loss": {"type": ["number", "null"]},
+        "take_profit": {"type": ["number", "null"]},
+        "take_profit_rr": {"type": ["number", "null"]},
+        "time_stop_days": {"type": ["integer", "null"]},
+        "actual_price": {"type": ["number", "null"]},
+        "actual_date": {"type": ["string", "null"], "format": "date-time"},
+        "exit_reason": {
+          "type": ["string", "null"],
+          "enum": ["stop_hit", "target_hit", "time_stop", "invalidated", "manual", "trailing_stop", null]
+        }
+      },
+      "additionalProperties": false
+    },
+    "position": {
+      "type": ["object", "null"],
+      "properties": {
+        "shares": {
+          "type": "integer",
+          "minimum": 100,
+          "multipleOf": 100,
+          "description": "HOSE/HNX/UPCOM lot rule: must be multiple of 100"
+        },
+        "position_value_vnd": {"type": "number", "minimum": 0},
+        "risk_vnd": {"type": "number", "minimum": 0},
+        "risk_pct_of_account": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "account_size_vnd": {"type": ["number", "null"], "minimum": 0},
+        "sizing_method": {"type": ["string", "null"]},
+        "raw_source": {
+          "type": "object",
+          "properties": {
+            "skill": {"type": "string"},
+            "file": {"type": "string"},
+            "fields": {"type": "object"}
+          }
+        }
+      }
+    },
+    "market_context": {
+      "type": ["object", "null"],
+      "properties": {
+        "sector": {"type": ["string", "null"]},
+        "vn_index_at_entry": {"type": ["number", "null"]},
+        "vn30_at_entry": {"type": ["number", "null"]},
+        "regime": {"type": ["string", "null"]},
+        "foreign_room_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100}
+      }
+    },
+    "monitoring": {
+      "type": "object",
+      "properties": {
+        "review_interval_days": {"type": "integer", "minimum": 1, "default": 5},
+        "next_review_date": {"type": ["string", "null"], "format": "date"},
+        "last_review_date": {"type": ["string", "null"], "format": "date"},
+        "review_status": {
+          "type": "string",
+          "enum": ["OK", "WARN", "REVIEW"],
+          "default": "OK"
+        },
+        "alerts": {"type": "array", "items": {"type": "string"}, "default": []}
+      }
+    },
+    "origin_fingerprint": {"type": ["string", "null"]},
+    "origin": {
+      "type": "object",
+      "required": ["skill", "output_file"],
+      "properties": {
+        "skill": {"type": "string"},
+        "output_file": {"type": "string"},
+        "screening_grade": {"type": ["string", "null"]},
+        "screening_score": {"type": ["number", "null"]},
+        "raw_provenance": {"type": "object", "default": {}}
+      }
+    },
+    "linked_reports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["skill", "file", "date"],
+        "properties": {
+          "skill": {"type": "string"},
+          "file": {"type": "string"},
+          "date": {"type": "string", "format": "date"}
+        }
+      },
+      "default": []
+    },
+    "outcome": {
+      "type": ["object", "null"],
+      "properties": {
+        "gross_pnl_vnd": {"type": ["number", "null"]},
+        "broker_fee_vnd": {"type": ["number", "null"], "minimum": 0},
+        "sale_tax_vnd": {"type": ["number", "null"], "minimum": 0},
+        "net_pnl_vnd": {"type": ["number", "null"]},
+        "net_pnl_pct": {"type": ["number", "null"]},
+        "holding_days": {"type": ["integer", "null"]},
+        "mae_pct": {"type": ["number", "null"]},
+        "mfe_pct": {"type": ["number", "null"]},
+        "mae_mfe_source": {"type": ["string", "null"]},
+        "lessons_learned": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "additionalProperties": false
+}
